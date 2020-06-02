@@ -6,17 +6,6 @@ var Sand = function(x, y, level) {
   this.size = 40;
   this.update = function(ctx) {
     
-    this.isDug = false;
-
-    // if (
-    //   !(
-    //     (this.x + this.w == playerx ||
-    //     this.x == playerx + playerw ||
-    //     this.y + this.h == playery ||
-    //     this.y == playery + playerw) 
-    //   )
-    // ) 
- 
   };
 
   this.draw = function(ctx, playerx, playery, playerw, playerh) {
@@ -27,17 +16,6 @@ var Sand = function(x, y, level) {
   this.playerw = playerw;
   this.playerh = playerh;
 
-
-     this.digBlack = function(ctx) {
-    if (this.x == this.playerx + playerw && this.y == playery - playerh){
-      isDug = true;
-      ctx.fillStyle = "black";
-      ctx.fillRect(this.x, this.y, 40, 40);
-    }
-    // ctx.fillStyle = "black";
-    // ctx.fillRect(this.x, this.y, 40, 40);
-  };
-  this.digBlack();
 
   this.sand1 = function(){
     this.img1 = new Image();

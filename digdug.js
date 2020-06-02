@@ -34,16 +34,6 @@ var DigDug = function(score) {
       this.callback();
     }
 
-    // if (
-    //   !(
-    //     this.x + this.w < enemyx ||
-    //     this.x > enemyx + enemyw ||
-    //     this.y + this.h < enemyy ||
-    //     this.y > enemyy + enemyw
-    //   )
-    // ) {
-    //   this.callback();
-    // }
 
     this.playerRestricMovement = function(){
     if (this.y < 280){
@@ -59,9 +49,6 @@ var DigDug = function(score) {
       this.x -= 8;
     };
 
-  //   if(Game.keys["Space"]){
-  //     this.draw();
-  // }; 
   }
 
   this.playerRestricMovement();
@@ -81,10 +68,6 @@ var DigDug = function(score) {
     if (Game.keys["Left"]) {
       ctx.drawImage(img, 120, 120, 40, 40, this.x, this.y, this.w, this.h);
     }
-    // ctx.beginPath();
-
-    // if (Game.keys["Space"]){
-    //   this.shootBullet.draw();
-    // }
+  
   };
 };

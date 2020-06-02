@@ -5,7 +5,6 @@ var GameBoard = function(callback, player, enemy, enemy2, sand, clouds, objects)
   this.gameobjects = [];
   this.count = [];
 
-
   this.update = function() {
 
     if (Game.keys["Escape"] && this.callback) {
@@ -26,7 +25,6 @@ this.objects = objects;
 
     ctx.clearRect(0, 0, Game.canvas.width, Game.canvas.height);
     // ctx.beginPath();
-
     this.sand.update();
     this.sand.draw(Game.ctx, player.x, player.y, player.w, player.h);
     ctx.fillStyle = "black";
@@ -43,11 +41,10 @@ this.objects = objects;
     this.player.update(enemy2.x, enemy2.y, enemy.w, endGame);
     this.player.draw(Game.ctx);
     this.clouds.draw(Game.ctx);
-    // this.bullets.draw(Game.ctx);
     ctx.fillStyle = "#FFFFFF";
     ctx.textAlign = "center";
     ctx.font = "bold 2em cosmic";
-    ctx.fillText("Score: ", Game.width / 2 - 380, 30);
-    ctx.fillText(this.score, Game.width / 2 - 320, 30);
+    ctx.fillText("Score: "+this.objects.score, Game.width / 2 - 380, 30);
+
   };
 };

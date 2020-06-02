@@ -7,21 +7,6 @@ this.y1 = 130;
 this.x2 = 450;
 this.y2 = 35;
 
-// this.velocity = 1;
-// this.moveUp = function() {
-//     this.velocity *=-1;
-//   };
-//   this.moveDown = function() {
-//       this.y1 = this.y1 + this.velocity;
-
-//   };
-//   this.movementloop = function(){
-//     this.moveDown();
-//  if ((this.y1)> 140 || this.y1 < 130){
-//     this.moveUp();
-//  }
-// }
-// setInterval(this.movementloop(), 100);
 
 this.draw = function(ctx){
     

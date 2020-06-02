@@ -20,6 +20,7 @@ function init() {
 var startGame = function() {
   var startscreen = new startScreen(
     "Dig Dug",
+    "(Avoid The Enemies and Pick up The Objects to gain points!)",
     "Press Enter to Start",
     playGame
   );
@@ -35,8 +36,7 @@ var playGame = function() {
   let sand = new Sand();
   let clouds = new Cloud();
   let objects = new Objects();
-  // let bullets = new Bullet(player.x, player.y);
-  // Game.setScreen(0, new GameBoard(endGame, player, enemy, Game.sandBlocks));
+
   Game.setScreen(0, new GameBoard(endGame, player, enemy, enemy2, sand, clouds, objects));
 
 };

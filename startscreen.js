@@ -1,9 +1,10 @@
 //startScreen.js
-var startScreen = function(title,subtitle,callback) 
+var startScreen = function(title,instructions, subtitle, callback) 
 {
 	this.title = title;
 	this.subtitle = subtitle;
 	this.callback = callback;
+	this.instructions = instructions;
 	
 	this.update = function(dt) {
 		if(Game.keys['Enter'] && this.callback) {
@@ -25,9 +26,13 @@ var startScreen = function(title,subtitle,callback)
 		ctx.fillStyle = "#FFFFFF";
 		ctx.textAlign = "center";
 		ctx.font = "bold 3em verdana";
-		ctx.fillText(this.title,Game.width/2,Game.height/2);
+		ctx.fillText(this.title,Game.width/2,Game.height/2 - 96);
 
-		ctx.font = "bold 1.5em verdana";
-		ctx.fillText(this.subtitle,Game.width/2,Game.height/2 + 32);
+		ctx.font = "bold 1.2em verdana";
+		ctx.fillText(this.instructions,Game.width/2,Game.height/2 - 40);
+
+		ctx.font = "bold 2.0em verdana";
+		ctx.fillText(this.subtitle,Game.width/2,Game.height/2 + 56);
+
 	}};
 };
