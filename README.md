@@ -1,2 +1,2 @@
 # DigDugJS
-Mini version of dig dug game
+DigDug Atari Game created with JavaScript and Canvas
